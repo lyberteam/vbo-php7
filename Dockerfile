@@ -87,8 +87,8 @@ RUN wget http://xdebug.org/files/xdebug-2.4.1.tgz
 RUN tar -xvzf xdebug-2.4.1.tgz
 RUN cd xdebug-2.4.1
 
-#RUN /usr/local/bin/phpize
-RUN /usr/bin/phpize
+RUN /usr/local/bin/phpize
+#RUN /usr/bin/phpize
 RUN ./configure --enable-xdebug --with-php-config=/usr/local/bin/php-config \
     && make \
     && make test
