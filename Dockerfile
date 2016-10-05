@@ -81,18 +81,19 @@ EXPOSE 9000
 
 RUN  dpkg-reconfigure -f noninteractive tzdata
 
-RUN cd /tmp
-RUN wget http://xdebug.org/files/xdebug-2.4.1.tgz
+#RUN cd /tmp
+#RUN wget http://xdebug.org/files/xdebug-2.4.1.tgz
 
-RUN tar -xvzf xdebug-2.4.1.tgz
-RUN cd xdebug-2.4.1
+#RUN tar -xvzf xdebug-2.4.1.tgz
+#RUN cd xdebug-2.4.1
 
-RUN /usr/local/bin/phpize
+#RUN /usr/local/bin/phpize
 #RUN /usr/bin/phpize
-RUN ./configure --enable-xdebug --with-php-config=/usr/local/bin/php-config \
+#RUN ./configure --enable-xdebug --with-php-config=/usr/local/bin/php-config \
     && make \
     && make test
 
-RUN cp modules/xdebug.so /usr/local/lib/php/extensions/no-debug-non-zts-20151012/
+#RUN cp modules/xdebug.so /usr/local/lib/php/extensions/no-debug-non-zts-20151012/
+#RUN rm -R /tmp/*
 
-RUN rm -R /tmp/*
+##ADD xdebug.so /usr/local/lib/php/extensions/no-debug-non-zts-20151012/
