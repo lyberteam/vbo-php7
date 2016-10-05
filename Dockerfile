@@ -38,7 +38,6 @@ RUN apt-get update && apt-get install -y \
         --with-png-dir=/usr/include \
         --with-jpeg-dir=/usr/include \
     && docker-php-ext-install gd \
-    && docker-php-ext-install mbstring \
     && docker-php-ext-enable opcache gd
 
 # Change TimeZone
@@ -90,8 +89,8 @@ RUN  dpkg-reconfigure -f noninteractive tzdata
 #RUN /usr/local/bin/phpize
 #RUN /usr/bin/phpize
 #RUN ./configure --enable-xdebug --with-php-config=/usr/local/bin/php-config \
-    && make \
-    && make test
+#    && make \
+#    && make test
 
 #RUN cp modules/xdebug.so /usr/local/lib/php/extensions/no-debug-non-zts-20151012/
 #RUN rm -R /tmp/*
