@@ -1,5 +1,5 @@
 # PHP7-FPM
-FROM php:fpm
+FROM php:7.0.12-fpm
 
 MAINTAINER Vendor="lyberteam" Description="This is a new php-fpm image(version for now 7.0.9)"
 
